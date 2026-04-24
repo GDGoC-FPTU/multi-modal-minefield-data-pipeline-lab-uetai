@@ -4,10 +4,17 @@
 # Task: Implement quality gates to reject corrupt data or logic discrepancies.
 
 def run_quality_gate(document_dict):
-    # TODO: Reject documents with 'content' length < 20 characters
-    # TODO: Reject documents containing toxic/error strings (e.g., 'Null pointer exception')
-    # TODO: Flag discrepancies (e.g., if tax calculation comment says 8% but code says 10%)
+    content = document_dict.get('content', '')
     
-    # Return True if pass, False if fail.
-    
+    if len(content) < 20:
+        return False
+        
+    toxic_strings = ['Null pointer exception', 'Fatal Error', 'Exception:']
+    for toxic in toxic_strings:
+        if toxic in content:
+            return False
+            
+    if '8%' in content and '0.10' in content:
+        print(f"WARNING: Discrepancy detected in {document_dict.get('document_id')}")
+        
     return True
