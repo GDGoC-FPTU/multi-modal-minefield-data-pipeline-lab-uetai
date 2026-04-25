@@ -3,7 +3,9 @@
 **Student Name:** Nguyen Minh Hieu  
 **Student ID:** 2A202600180  
 **Team:** 1 member  
+**GithubName**: nmhieuhieuhieu
 
+**Email**: minhhieutrumhoa1@gmail.com
 ## Project Overview
 This project implements a robust data pipeline to ingest, normalize, and validate unstructured data from multiple sources (PDF, CSV, HTML, Text Transcripts, and Legacy Python code). The goal is to build a high-quality Knowledge Base for AI Agents while ensuring data integrity and quality through semantic checks.
 
